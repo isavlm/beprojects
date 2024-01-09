@@ -47,35 +47,32 @@ import sys
 
 
 def find_second_largest(numbers): 
-#Step 1 check the size of the list. 
-    
-    
-#Step 2 create a variable 
-    
+
     unique_numbers = sorted(set(numbers))
-    print(unique_numbers)
-    print(len(unique_numbers))
+    
+    #print(unique_numbers)
+    print()
+    # print(len(unique_numbers))
+    print()
+    
     if len(unique_numbers) <2:
         return "No second largest number, try again."
-#Step 3 Iterate through the list 
+    print()
     
+    for i in unique_numbers:
+        if i == max(unique_numbers): #I want to find the largest number of the list.
+            #append the second to last element after the list was set and sorted.
+            second_largest = unique_numbers[-2] #The index 2 or -2 should be the second largest number index. 
+            return second_largest
 
 
-         
-
-
-
-
-
-
-
-#Test cases: 
-# numbers1 = [5,2,8,1,9,3]
-# print(find_second_largest(numbers1))
+#Test Cases
+numbers = [5,2,8,1,9,3]
+print(f"Case 1. The second largest number is:" , find_second_largest(numbers))
 
 numbers2 = [4,4,4,4]
-print(find_second_largest(numbers2))
+print(f"Case 2. The second largest number is:", find_second_largest(numbers2))
 
-# numbers3 = [10, 5,10,20,20,15]
-# print(find_second_largest(numbers3))
+numbers3 = [10, 5,10,20,20,15]
+print(f"Case 3. The second largest number is:", find_second_largest(numbers3))
 
