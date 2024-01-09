@@ -9,7 +9,7 @@ import sys
 #         if i < min:
 #             min = i
 #     for i in arr:
-#         if not i % min == 0:
+#         if not i % min == 0:  #why do we use MODULO/REMAINDER here?
 #             return False
     
 #     return True
@@ -47,12 +47,20 @@ import sys
 
 
 def find_second_largest(numbers): 
-   numbers = []
-   if numbers > 2: 
-      print("Not enough numbers to compare, please try again")
-      
-   if numbers < 2:
-      for i in numbers:
+#Step 1 check the size of the list. 
+    
+    
+#Step 2 create a variable 
+    
+    unique_numbers = sorted(set(numbers))
+    print(unique_numbers)
+    print(len(unique_numbers))
+    if len(unique_numbers) <2:
+        return "No second largest number, try again."
+#Step 3 Iterate through the list 
+    
+
+
          
 
 
@@ -62,12 +70,12 @@ def find_second_largest(numbers):
 
 
 #Test cases: 
-numbers1 = [5,2,8,1,9,3]
-print(find_second_largest(numbers1))
+# numbers1 = [5,2,8,1,9,3]
+# print(find_second_largest(numbers1))
 
 numbers2 = [4,4,4,4]
 print(find_second_largest(numbers2))
 
-numbers3 = [10, 5,10,20,20,15]
-print(find_second_largest(numbers3))
+# numbers3 = [10, 5,10,20,20,15]
+# print(find_second_largest(numbers3))
 
