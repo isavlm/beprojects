@@ -76,3 +76,4 @@ print(f"Case 2. The second largest number is:", find_second_largest(numbers2))
 numbers3 = [10, 5,10,20,20,15]
 print(f"Case 3. The second largest number is:", find_second_largest(numbers3))
 
+## Hashing Challenge 
