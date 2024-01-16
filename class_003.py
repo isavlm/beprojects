@@ -51,13 +51,13 @@ def find_second_largest(numbers):
     unique_numbers = sorted(set(numbers))
     
     #print(unique_numbers)
-    print()
+   
     # print(len(unique_numbers))
-    print()
+    
     
     if len(unique_numbers) <2:
         return "No second largest number, try again."
-    print()
+    
     
     for i in unique_numbers:
         if i == max(unique_numbers): #I want to find the largest number of the list.
